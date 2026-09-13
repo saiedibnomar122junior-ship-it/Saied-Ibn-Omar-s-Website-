@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Saied Ibn Omar | IT & Education</title>
+    <title>Saied Ibn Omar | IT Professional</title>
 
     <style>
         * {
@@ -16,22 +16,23 @@
 
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.7;
+            color: #1f2937;
             background: #f4f7fb;
-            color: #222;
         }
 
         /* NAVIGATION */
         header {
-            background: #12355b;
+            background: #0b1f3a;
             color: white;
-            padding: 18px 8%;
+            padding: 18px 7%;
             display: flex;
             justify-content: space-between;
             align-items: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
         }
 
         header h2 {
@@ -40,64 +41,70 @@
 
         nav {
             display: flex;
-            gap: 22px;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
         nav a {
             color: white;
             text-decoration: none;
             font-weight: bold;
+            font-size: 15px;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #8fd3ff;
+            color: #67d5ff;
         }
 
         /* HERO */
         .hero {
-            min-height: 90vh;
+            min-height: 92vh;
             display: flex;
-            justify-content: center;
             align-items: center;
+            justify-content: center;
             text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(135deg, #eef5ff, #ffffff);
+            padding: 70px 20px;
+            background:
+                radial-gradient(circle at top right, #dff4ff, transparent 35%),
+                linear-gradient(135deg, #eef6ff, #ffffff);
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 850px;
         }
 
         .profile-photo {
-            width: 150px;
-            height: 150px;
+            width: 155px;
+            height: 155px;
             object-fit: cover;
             border-radius: 50%;
-            border: 5px solid white;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
-            margin-bottom: 20px;
+            border: 6px solid white;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+            margin-bottom: 25px;
         }
 
         .hero h1 {
             font-size: 48px;
-            color: #12355b;
+            color: #0b1f3a;
             margin-bottom: 12px;
         }
 
         .hero h3 {
+            color: #126782;
             font-size: 22px;
-            color: #1d5d94;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
         }
 
         .hero p {
+            max-width: 700px;
+            margin: auto;
             font-size: 18px;
-            max-width: 650px;
-            margin: 0 auto 25px;
+            color: #4b5563;
         }
 
         .buttons {
+            margin-top: 28px;
             display: flex;
             justify-content: center;
             gap: 15px;
@@ -106,143 +113,196 @@
 
         .button {
             display: inline-block;
-            background: #12355b;
+            padding: 13px 26px;
+            border-radius: 8px;
+            background: #0b1f3a;
             color: white;
-            padding: 13px 25px;
             text-decoration: none;
-            border-radius: 7px;
             font-weight: bold;
             transition: 0.3s;
         }
 
         .button:hover {
-            background: #1d5d94;
+            background: #126782;
             transform: translateY(-2px);
         }
 
         .button-outline {
             background: transparent;
-            color: #12355b;
-            border: 2px solid #12355b;
+            color: #0b1f3a;
+            border: 2px solid #0b1f3a;
         }
 
         .button-outline:hover {
-            background: #12355b;
             color: white;
         }
 
-        /* GENERAL SECTIONS */
+        /* SECTIONS */
         section {
-            padding: 75px 8%;
-            text-align: center;
+            padding: 80px 7%;
         }
 
         section h2 {
-            color: #12355b;
-            margin-bottom: 15px;
+            text-align: center;
+            color: #0b1f3a;
             font-size: 34px;
+            margin-bottom: 12px;
         }
 
         .section-intro {
+            text-align: center;
+            color: #667085;
             max-width: 700px;
-            margin: 0 auto 35px;
-            color: #555;
+            margin: 0 auto 40px;
         }
 
         /* ABOUT */
-        .about-box {
-            max-width: 850px;
-            margin: auto;
+        .about {
             background: white;
-            padding: 35px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .about-box {
+            max-width: 900px;
+            margin: auto;
+            padding: 40px;
+            background: #f8fbff;
+            border-left: 5px solid #126782;
+            border-radius: 12px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
         }
 
         .about-box p {
+            margin-bottom: 15px;
             font-size: 17px;
         }
 
         /* EDUCATION */
+        .education {
+            background: #eef5fb;
+        }
+
         .education-box {
-            max-width: 850px;
+            max-width: 900px;
             margin: auto;
             background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            padding: 35px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
         }
 
         .education-box h3 {
-            color: #12355b;
+            color: #0b1f3a;
+            margin-bottom: 10px;
+        }
+
+        .education-box .year {
+            color: #126782;
+            font-weight: bold;
             margin-bottom: 10px;
         }
 
         /* CARDS */
         .cards {
+            max-width: 1100px;
+            margin: auto;
             display: flex;
             justify-content: center;
             gap: 25px;
             flex-wrap: wrap;
-            max-width: 1000px;
-            margin: auto;
         }
 
         .card {
+            width: 310px;
             background: white;
-            width: 290px;
-            padding: 30px 25px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
             transition: 0.3s;
         }
 
         .card:hover {
             transform: translateY(-7px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.12);
         }
 
         .card-icon {
-            font-size: 35px;
+            font-size: 36px;
             margin-bottom: 12px;
         }
 
         .card h3 {
-            color: #12355b;
+            color: #0b1f3a;
             margin-bottom: 10px;
         }
 
         .card p {
-            color: #555;
+            color: #5f6b7a;
+        }
+
+        /* EXPERIENCE */
+        .experience {
+            background: #eef5fb;
+        }
+
+        .experience-card {
+            max-width: 900px;
+            margin: 0 auto 25px;
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
+        }
+
+        .experience-card h3 {
+            color: #0b1f3a;
+            margin-bottom: 5px;
+        }
+
+        .experience-card .company {
+            color: #126782;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .experience-card ul {
+            padding-left: 20px;
         }
 
         /* CONTACT */
-        .contact-box {
-            max-width: 700px;
-            margin: auto;
+        .contact {
             background: white;
-            padding: 35px;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .contact-box {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+            padding: 40px;
+            background: #f4f8fc;
+            border-radius: 14px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.07);
         }
 
         .contact-box p {
-            margin: 10px 0;
+            margin-bottom: 20px;
             font-size: 17px;
         }
 
-        .contact-box a {
-            color: #12355b;
+        .email {
+            color: #126782;
             font-weight: bold;
-            text-decoration: none;
         }
 
         /* FOOTER */
         footer {
-            background: #12355b;
+            background: #0b1f3a;
             color: white;
             text-align: center;
-            padding: 25px 15px;
+            padding: 30px 15px;
+        }
+
+        footer p {
+            margin: 5px;
         }
 
         /* MOBILE */
@@ -250,22 +310,22 @@
 
             header {
                 flex-direction: column;
-                gap: 12px;
+                gap: 14px;
                 padding: 15px 5%;
             }
 
             nav {
-                gap: 12px;
-                flex-wrap: wrap;
                 justify-content: center;
+                gap: 12px;
             }
 
             nav a {
-                font-size: 14px;
+                font-size: 13px;
             }
 
             .hero {
-                min-height: 85vh;
+                min-height: 88vh;
+                padding: 50px 18px;
             }
 
             .hero h1 {
@@ -281,27 +341,28 @@
             }
 
             .profile-photo {
-                width: 120px;
-                height: 120px;
+                width: 125px;
+                height: 125px;
             }
 
             section {
-                padding: 55px 5%;
+                padding: 60px 5%;
             }
 
             section h2 {
                 font-size: 29px;
             }
 
-            .card {
-                width: 100%;
-                max-width: 350px;
-            }
-
             .about-box,
             .education-box,
+            .experience-card,
             .contact-box {
                 padding: 25px 20px;
+            }
+
+            .card {
+                width: 100%;
+                max-width: 360px;
             }
         }
     </style>
@@ -317,6 +378,7 @@
             <a href="#home">Home</a>
             <a href="#about">About</a>
             <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
@@ -331,18 +393,18 @@
 
             <img src="saied.jpg" alt="Saied Ibn Omar" class="profile-photo">
 
-            <h1>Hello, I'm Saied Ibn Omar</h1>
+            <h1>Saied Ibn Omar</h1>
 
-            <h3>Information Technology Education Student</h3>
+            <h3>B.Sc. Information Technology Education Graduate</h3>
 
             <p>
-                Passionate about technology, education, innovation,
-                and using digital solutions to solve real-world problems.
+                Passionate about technology, education, innovation
+                and using digital solutions to solve everyday problems.
             </p>
 
             <div class="buttons">
                 <a href="#about" class="button">About Me</a>
-                <a href="#projects" class="button button-outline">View Projects</a>
+                <a href="#projects" class="button button-outline">View My Projects</a>
             </div>
 
         </div>
@@ -351,29 +413,31 @@
 
 
     <!-- ABOUT -->
-    <section id="about">
+    <section class="about" id="about">
 
         <h2>About Me</h2>
 
         <p class="section-intro">
-            Get to know more about me, my interests and my goals.
+            A little about me, my interests and my goals.
         </p>
 
         <div class="about-box">
 
             <p>
-                My name is <strong>Saied Ibn Omar</strong>. I am interested
-                in Information Technology, education and innovation.
-                I enjoy learning about technology and exploring how
-                digital tools can be used to solve everyday problems.
+                My name is <strong>Saied Ibn Omar</strong>. I am a
+                graduate of Information Technology Education with an
+                interest in technology, education and innovation.
             </p>
 
-            <br>
+            <p>
+                I enjoy learning about computers and technology and
+                exploring how technology can be used to solve
+                everyday problems.
+            </p>
 
             <p>
-                My goal is to continue developing my knowledge and skills
-                in technology while contributing positively to education
-                and society.
+                I also have an interest in teaching ICT and helping
+                others understand and use technology.
             </p>
 
         </div>
@@ -382,25 +446,115 @@
 
 
     <!-- EDUCATION -->
-    <section id="education">
+    <section class="education" id="education">
 
         <h2>Education</h2>
 
         <p class="section-intro">
-            My academic background and area of study.
+            My academic background.
         </p>
 
         <div class="education-box">
 
-            <h3>Akenten Appiah-Menka University of Skills Training and Entrepreneurial Development</h3>
+            <h3>
+                B.Sc. Information Technology Education
+            </h3>
 
-            <p>
-                BSc Information Technology Education
+            <p class="year">
+                2022 – 2026
             </p>
 
             <p>
-                Faculty of Applied Sciences and Mathematics Education
+                <strong>
+                    University of Skills Training and Entrepreneurial Development (USTED), Kumasi
+                </strong>
             </p>
+
+            <p>
+                During my studies, I learned about computers,
+                information technology, software, networking
+                and educational technology.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+    <section class="experience" id="experience">
+
+        <h2>Experience</h2>
+
+        <p class="section-intro">
+            Some of my internship and work experience.
+        </p>
+
+
+        <div class="experience-card">
+
+            <h3>ICT Teaching & Laboratory Support</h3>
+
+            <p class="company">
+                St. John's Grammar Senior High School, Achimota, Accra | 2026
+            </p>
+
+            <ul>
+                <li>Supported ICT teaching activities.</li>
+                <li>Assisted with computer laboratory activities.</li>
+                <li>Helped students with basic computer problems.</li>
+            </ul>
+
+        </div>
+
+
+        <div class="experience-card">
+
+            <h3>Project & Data Support Intern</h3>
+
+            <p class="company">
+                Zakat and Sadaqa Trust Fund of Ghana, Accra | 2025
+            </p>
+
+            <ul>
+                <li>Assisted with recording and organizing information.</li>
+                <li>Supported data entry and record keeping.</li>
+                <li>Assisted with reports and office technology.</li>
+            </ul>
+
+        </div>
+
+
+        <div class="experience-card">
+
+            <h3>Project Operations Assistant – Intern</h3>
+
+            <p class="company">
+                Zakat and Sadaqa Trust Fund of Ghana, Accra | 2024
+            </p>
+
+            <ul>
+                <li>Assisted with organizing physical and digital records.</li>
+                <li>Supported project activities.</li>
+                <li>Assisted with basic technology-related tasks.</li>
+            </ul>
+
+        </div>
+
+
+        <div class="experience-card">
+
+            <h3>Teaching & IT Administrative Assistant – Intern</h3>
+
+            <p class="company">
+                Bako's Memorial Primary School, Accra | 2023
+            </p>
+
+            <ul>
+                <li>Supported basic computer lessons.</li>
+                <li>Helped organize student records.</li>
+                <li>Assisted with school activities.</li>
+            </ul>
 
         </div>
 
@@ -410,38 +564,82 @@
     <!-- SKILLS -->
     <section id="skills">
 
-        <h2>My Skills & Interests</h2>
+        <h2>My Skills</h2>
 
         <p class="section-intro">
-            Areas I am developing and interested in.
+            Some of the skills and areas I am developing.
         </p>
 
         <div class="cards">
 
             <div class="card">
                 <div class="card-icon">💻</div>
-                <h3>Information Technology</h3>
+
+                <h3>Computer Skills</h3>
+
                 <p>
-                    Interested in information technology,
-                    digital tools and computer systems.
+                    Basic knowledge of computers and
+                    information technology.
                 </p>
             </div>
+
+
+            <div class="card">
+                <div class="card-icon">🛠️</div>
+
+                <h3>Technical Support</h3>
+
+                <p>
+                    Basic troubleshooting and support
+                    for common computer problems.
+                </p>
+            </div>
+
 
             <div class="card">
                 <div class="card-icon">🎓</div>
-                <h3>Education</h3>
+
+                <h3>Teaching</h3>
+
                 <p>
-                    Interested in teaching, learning and
-                    educational technology.
+                    Interested in teaching ICT and helping
+                    students learn technology.
                 </p>
             </div>
 
+
+            <div class="card">
+                <div class="card-icon">📊</div>
+
+                <h3>Data Management</h3>
+
+                <p>
+                    Basic experience working with
+                    digital records and information.
+                </p>
+            </div>
+
+
+            <div class="card">
+                <div class="card-icon">📋</div>
+
+                <h3>Project Work</h3>
+
+                <p>
+                    Experience working on academic
+                    and technology-related projects.
+                </p>
+            </div>
+
+
             <div class="card">
                 <div class="card-icon">💡</div>
-                <h3>Innovation</h3>
+
+                <h3>Technology & Innovation</h3>
+
                 <p>
-                    Passionate about finding creative
-                    technology-based solutions to problems.
+                    Interested in using technology to
+                    solve everyday problems.
                 </p>
             </div>
 
@@ -451,12 +649,12 @@
 
 
     <!-- PROJECTS -->
-    <section id="projects">
+    <section class="education" id="projects">
 
         <h2>My Projects</h2>
 
         <p class="section-intro">
-            Some of the projects and ideas I have worked on.
+            Some academic and personal projects.
         </p>
 
         <div class="cards">
@@ -468,7 +666,7 @@
                 <h3>Smart Neighbourhood Help System</h3>
 
                 <p>
-                    A web-based system designed to connect
+                    A web-based project designed to connect
                     people who need help with available assistance.
                 </p>
 
@@ -482,8 +680,8 @@
                 <h3>Hostel Records Management System</h3>
 
                 <p>
-                    A system designed to help manage hostel
-                    records and information efficiently.
+                    A project designed to help manage hostel
+                    records and information.
                 </p>
 
             </div>
@@ -493,11 +691,11 @@
 
                 <div class="card-icon">🌐</div>
 
-                <h3>Personal Website</h3>
+                <h3>Personal Portfolio Website</h3>
 
                 <p>
-                    A responsive personal website created to
-                    showcase my background, skills and projects.
+                    My personal website for showcasing my
+                    education, skills, experience and projects.
                 </p>
 
             </div>
@@ -508,26 +706,28 @@
 
 
     <!-- CONTACT -->
-    <section id="contact">
+    <section class="contact" id="contact">
 
         <h2>Contact Me</h2>
 
         <p class="section-intro">
-            Feel free to reach out to me.
+            Feel free to contact me for professional opportunities
+            or technology-related discussions.
         </p>
 
         <div class="contact-box">
 
             <p>
                 📧 Email:
-                <a href="mailto:saiedibnomar122junior@gmail.com">
+                <span class="email">
                     saiedibnomar122junior@gmail.com
-                </a>
+                </span>
             </p>
 
-            <br>
-
-            <a href="mailto:saiedibnomar122junior@gmail.com" class="button">
+            <a
+                href="mailto:saiedibnomar122junior@gmail.com"
+                class="button"
+            >
                 Send Me an Email
             </a>
 
